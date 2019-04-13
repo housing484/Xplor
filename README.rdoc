@@ -8,7 +8,8 @@ To Set Up in Cloud9, run:
 
 gem install rails -v 4.2.11
 
-git clone <a>http://github.com/housing484/Xplor</a>
+# include http:// before link
+git clone http://github.com/housing484/Xplor
 
 rails new Xplor -T
 
