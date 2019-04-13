@@ -17,4 +17,5 @@ cd Xplor
 `bundle install --without production`
 
 # to run server
+
 rails s -p $PORT -b $IP
