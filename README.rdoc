@@ -1,28 +1,20 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+To Set Up in Cloud9, run:
 
-Things you may want to cover:
+# Run all development in Cloud9 so we all have the same Dev environment
+# Do NOT push into master. Submit pull request.
+# We're using ruby version 2.4.0 and rails 4.2.11.
 
-* Ruby version
+gem install rails -v 4.2.11
 
-* System dependencies
+git clone https://github.com/housing484/Xplor
 
-* Configuration
+rails new Xplor -T
 
-* Database creation
+cd Xplor
 
-* Database initialization
+# bundle install --without production
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+# to run server
+rails s -p $PORT -b $IP
