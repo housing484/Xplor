@@ -26,6 +26,9 @@
       <li class="nav-item">
         <a class="nav-link disabled" href="#" tabindex="-1">Sublease</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" <%= link_to "SignIn/SignUp", new_user_registration_path %> </a>
+      </li>
       
     </ul>
     <form class="form-inline my-2 my-lg-0">
@@ -35,6 +38,17 @@
   </div>
 </nav>
 
+<p style="padding-bottom: 50px;"></p>
+
+<% if notice %>
+  <p class="alert alert-success"><%= notice %></p>
+<% end %>
+<% if alert %>
+  <p class="alert alert-danger"><%= alert %></p>
+<% end %>
+
 <%= yield %>
 </body>
 </html>
+
+

@@ -51,3 +51,6 @@ gem 'haml'
 group :development, :test do
   gem 'debugger2'
 end
+
+# devise
+gem 'devise'
