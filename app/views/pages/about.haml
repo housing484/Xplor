@@ -1,2 +1,57 @@
-%h1= @title
-%p= @content
+!!!
+%html{:lang => "en"}
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{:charset => "utf-8"}/
+    %meta{:content => "width=device-width, initial-scale=1, shrink-to-fit=no", :name => "viewport"}/
+    %meta{:content => "", :name => "description"}/
+    %meta{:content => "", :name => "author"}/
+    %link{:href => "../../../../favicon.ico", :rel => "icon"}/
+    %title Jumbotron Template for Bootstrap
+    %link{:href => "https://getbootstrap.com/docs/4.0/examples/jumbotron/", :rel => "canonical"}/
+    / Bootstrap core CSS
+    %link{:href => "../../dist/css/bootstrap.min.css", :rel => "stylesheet"}/
+    / Custom styles for this template
+    %link{:href => "jumbotron.css", :rel => "stylesheet"}/
+  %body
+
+%main{:role => "main"}
+  / Main jumbotron for a primary marketing message or call to action
+  .jumbotron
+    .container
+      %h1.display-3 About Xplor
+      %p We are group of three students (Nayeem, Pawan, Omar) from MSU, working on making apartment finding easier for students like you and me. 
+      %p We are composed of three students : Omar, Pawan and Nayeem. We have understood the feeling of difficulties in finding apartments in school time or finding someone to sublease during certain time of school. So to make subleasing and renting easire through individuals. We have come up with Xplor to make changes in student housing.
+      %p
+        %a.btn.btn-primary.btn-lg{:href => "#", :role => "button"} Sign Up Today »
+  .container
+    / Example row of columns
+    .row
+      .col-md-4
+        %h2 Heading
+        %p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+        %p
+          %a.btn.btn-secondary{:href => "#", :role => "button"} View details »
+      .col-md-4
+        %h2 Heading
+        %p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+        %p
+          %a.btn.btn-secondary{:href => "#", :role => "button"} View details »
+      .col-md-4
+        %h2 Heading
+        %p Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+        %p
+          %a.btn.btn-secondary{:href => "#", :role => "button"} View details »
+    %hr/
+  / /container
+%footer.container
+  %p © Company 2017-2018
+/
+  Bootstrap core JavaScript
+  \==================================================
+/ Placed at the end of the document so the pages load faster
+%script{:crossorigin => "anonymous", :integrity => "sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN", :src => "https://code.jquery.com/jquery-3.2.1.slim.min.js"}
+:javascript
+  window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')
+%script{:src => "../../assets/js/vendor/popper.min.js"}
+%script{:src => "../../dist/js/bootstrap.min.js"}

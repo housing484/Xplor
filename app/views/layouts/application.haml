@@ -8,8 +8,9 @@
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   %body
-    %nav.navbar.navbar-expand-md.navbar-dark.bg-dark.fixed-top
-      %a.navbar-brand{:href => "#"} Xplorr
+    %nav.navbar.navbar-expand-md.navbar-dark.bg-dark
+      %img.mb-4{:alt => "", :height => "50", :src => "https://images.vexels.com/media/users/3/142848/isolated/preview/246dc5103d14ec79846193f8316414e5-x-letter-origami-isotype-by-vexels.png", :width => "72"}/
+
       %button.navbar-toggler{"aria-controls" => "navbarsExampleDefault", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarsExampleDefault", "data-toggle" => "collapse", :type => "button"}
         %span.navbar-toggler-icon
       #navbarsExampleDefault.collapse.navbar-collapse
@@ -25,4 +26,6 @@
         %form.form-inline.my-2.my-lg-0
           %input.form-control.mr-sm-2{"aria-label" => "Search", :placeholder => "Search", :type => "text"}/
           %button.btn.btn-secondary.my-2.my-sm-0{:type => "submit"} Search
+          
+          
     = yield
