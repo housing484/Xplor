@@ -1,12 +1,23 @@
 class PostsController < ApplicationController
-    def index
-        @posts = Post.all
+    def homepage
         
     end
+    
+    def listfindapt
+        
+    end
+
+    
+    def AptPosts
+        @posts = Post.all
+    end
+    
+    
     
     def show 
         @post = Post.find(params[:id])
     end
+    
     
     def new 
         
@@ -21,6 +32,6 @@ class PostsController < ApplicationController
     end
     
     private def post_params
-        params.require(:post).permit(:title, :body)
+        params.require(:Post).permit(:title, :body)
     end
 end
