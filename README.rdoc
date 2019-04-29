@@ -8,6 +8,7 @@ To Set Up in Cloud9, run:
 
 gem install rails -v 4.2.11
 
+git init 
 # Use http:// before link
 git clone http://github.com/housing484/Xplor
 
@@ -20,3 +21,11 @@ bundle install \-\-without production
 # to run server
 
 rails s -p $PORT -b $IP
+
+
+#to run the cucumber test for home page
+cucumber features/homepage.features
+
+#to run the cucumber test for login page
+cucumber features/login.feature
+
