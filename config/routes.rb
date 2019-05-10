@@ -1,12 +1,13 @@
 Rails.application.routes.draw do
   
+  resources :apartmentsws
   devise_for :users 
   devise_scope :user do  
     get '/users/sign_out' => 'devise/sessions#destroy'  
   
 end
 
-  root 'posts#homepage', as:'home'
+  root 'apartmentsws#homepage', as:'home'
 
 
   get 'about' => 'pages#about', as: 'about'

@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Apartmentsws</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Body</th>
+      <th></th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @apartmentsws.each do |apartmentsw| %>
+      <tr>
+        <td><%= apartmentsw.title %></td>
+        <td><%= apartmentsw.body %></td>
+      
+        <td><%= apartmentsw.user %></td>
+        <td><%= link_to 'Show', apartmentsw %></td>
+        
+        
+          <td><%= link_to 'Edit', edit_apartmentsw_path(apartmentsw) %></td>
+        
+        
+          <td><%= link_to 'Destroy', apartmentsw, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Apartmentsw', new_apartmentsw_path %>
