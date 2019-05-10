@@ -8,33 +8,54 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+  
+  
+<!--nav bar with home, rent sign in sign up and other buttons-->
 <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-  <a class="navbar-brand" href="#">Xplorr</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
+  <img class="mb-4" src="http://www.voicemailtel.com/wp-content/uploads/2013/08/x-lite.png" alt="" width="40" height="40">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault">
   </button>
 
+<!--home button-->
   <div class="collapse navbar-collapse" id="navbarsExampleDefault">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Rent</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#" tabindex="-1">Sublease</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" <%= link_to "SignIn/SignUp", new_user_registration_path %> </a>
+        <%= link_to "Home", home_path %>
       </li>
       
+  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" <%= link_to "About", about_path %></a>
+      </li>
+      
+
+      <% if current_user %>
+       <!--link to sign out page-->
+        <li class="nav-item">
+        <a class="nav-link" <%= link_to "Log out", destroy_user_session_path, method: :delete %> </a>
+      </li>
+      
+      <% else %>
+      <!--About Page link at nav-bar-->
+      
+      
+      
+      <!--link to sign IN page-->
+      <li class="nav-item">
+        <!--<a class="nav-link" <%= link_to "Log In", new_user_session_path %> </a> -->
+      </li>
+      
+      <!--link to sign up page-->
+      <li class="nav-item">
+        <a class="nav-link" <%= link_to "Sign Up!", new_user_registration_path %> </a>
+      </li>
+      
+      <% end %>
+      
+     
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-      <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-    </form>
+   
   </div>
 </nav>
 
