@@ -11,17 +11,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190510140316) do
+ActiveRecord::Schema.define(version: 20190510174522) do
 
   create_table "apartmentsws", force: :cascade do |t|
     t.text     "title"
     t.string   "body"
     t.integer  "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "avatar"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
   add_index "apartmentsws", ["user_id"], name: "index_apartmentsws_on_user_id"
+
+  create_table "comments", force: :cascade do |t|
+    t.string   "name"
+    t.text     "body"
+    t.integer  "apartmentsw_id"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
+
+  add_index "comments", ["apartmentsw_id"], name: "index_comments_on_apartmentsw_id"
 
   create_table "posts", force: :cascade do |t|
     t.string   "title"

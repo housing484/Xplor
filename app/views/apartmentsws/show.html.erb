@@ -1,21 +1,33 @@
+</br>
+</br>
 <p id="notice"><%= notice %></p>
 
+<%= image_tag @apartmentsw.image.url(:medium) %>
+
 <p>
-  <strong>Title:</strong>
+  <strong>Address:</strong>
   <%= @apartmentsw.title %>
 </p>
 
 <p>
-  <strong>Body:</strong>
+  <strong>Availability:</strong>
   <%= @apartmentsw.body %>
 </p>
 
-
-
+<p>
+  <strong>Zip Code:</strong>
+  <%= @apartmentsw.body %>
+</p>
 <p>
   <strong>User:</strong>
-  <%= @apartmentsw.user%>
+  <%= @apartmentsw.user_id %>
 </p>
+
+<br>
+<h2> <%= @apartmentsw.comments.count %> Comments</h2>
+    <%= render @apartmentsw.comments %>
+    <h3> Leave a comment</h3>
+    <%= render 'comments/form' %>
 
 <%= link_to 'Edit', edit_apartmentsw_path(@apartmentsw) %> |
 <%= link_to 'Back', apartmentsws_path %>

@@ -55,6 +55,9 @@ end
 # devise
 gem 'devise'
 
+
+gem 'mini_magick', '4.8.0'
+gem "paperclip", :git => "http://github.com/thoughtbot/paperclip.git"
 #Cucumber test gem file
 group :test do
   gem 'cucumber-rails', require: false
