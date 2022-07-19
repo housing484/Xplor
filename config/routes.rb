@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   
-  resources :apartmentsws
+  resources :apartmentsws do
+    resources :comments
+  end
   devise_for :users 
   devise_scope :user do  
     get '/users/sign_out' => 'devise/sessions#destroy'  
@@ -15,7 +17,6 @@ end
   get 'rental2' => 'pages#listfindapt', as: 'rental2'
   
   get 'index' => 'posts#index', as: 'apartment'
- 
   resources :posts 
   
 

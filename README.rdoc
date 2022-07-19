@@ -6,17 +6,19 @@ To Set Up in Cloud9, run:
 # Do NOT push into master. Submit pull request.
 # We're using ruby version 2.4.0 and rails 4.2.11.
 
-gem install rails -v 4.2.11
 
-git init 
-# Use http:// before link
-git clone http://github.com/housing484/Xplor
+Make sure rails is installed in your machine
+1. gem install rails -v 4.2.11
 
-rails new Xplor -T
+To clone in local base follow below
 
-cd Xplor
+1.git init ( Use http:// before link git clone http://github.com/housing484/Xplor)
 
-bundle install \-\-without production
+2. rails new Xplor -T
+
+3. cd Xplor
+
+4. bundle install \-\-without production
 
 # to run server
 

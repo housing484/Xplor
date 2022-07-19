@@ -1,4 +1,4 @@
-<%= form_for(@apartmentsw) do |f| %>
+<%= form_for @apartmentsw, html: { multipart: true } do |f| %>
   <% if @apartmentsw.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@apartmentsw.errors.count, "error") %> prohibited this apartmentsw from being saved:</h2>
@@ -10,13 +10,23 @@
       </ul>
     </div>
   <% end %>
+  
+  <div class="field">
+    <%= f.label :image %><br>
+    <%= f.file_field :image %>
+  </div>
 
   <div class="field">
-    <%= f.label :title %><br>
+    <%= f.label :address %><br>
     <%= f.text_field :title %>
   </div>
   <div class="field">
-    <%= f.label :body %><br>
+    <%= f.label :availability %><br>
+    <%= f.text_field :body %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :zip %><br>
     <%= f.text_field :body %>
   </div>
  
@@ -24,6 +34,8 @@
     <%= f.label :user_id %><br>
     <%= f.text_field :user_id %>
   </div>
+  
+  
   <div class="actions">
     <%= f.submit %>
   </div>
